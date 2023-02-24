@@ -1,0 +1,8 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "CopyFiles",
+        "command": "./copy_to_device.sh",
+        "type": "shell"
+    }]
+}

@@ -1,0 +1,2 @@
+cp ./src/*.py ./DEVICE/
+
