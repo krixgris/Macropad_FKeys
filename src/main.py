@@ -12,7 +12,7 @@ macropad = MacroPad(rotation=90)
 macropad.pixels.brightness = MACROPAD_BRIGHTNESS
 
 macropad_sleep_keys = False
-screensaving = True
+screensaving = False
 screensaver_group = displayio.Group()
 
 loop_start_time = 0
@@ -35,7 +35,6 @@ while True:
 		if key_event.pressed:
 			loop_last_action = time.monotonic()
 			key = key_event.key_number
-			# print(f"F{key+1}")
 			text_lines[1].text = f"F{key+1}"
 			macropad.keyboard.send(key+FKEY_OFFSET)
 			macropad.keyboard.release_all()
