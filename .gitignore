@@ -2,3 +2,4 @@
 ./DEVICE
 DEVICE
 ./.vscode/**/*
+./.vscode/settings.json
