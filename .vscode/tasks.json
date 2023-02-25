@@ -3,6 +3,16 @@
     "tasks": [{
         "label": "CopyFiles",
         "command": "./copy_to_device.sh",
-        "type": "shell"
-    }]
+        "type": "process",
+		"presentation": {
+			"echo": true,
+			"reveal": "silent",
+			"focus": false,
+			"panel": "shared",
+			"showReuseMessage": false,
+			"clear": false
+		}
+		// "isBackground": true,
+    }
+]
 }

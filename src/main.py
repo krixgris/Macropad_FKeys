@@ -21,7 +21,7 @@ loop_last_action = 0
 text_lines = macropad.display_text(title="Keypad", title_scale=1, text_scale=2)
 text_lines.show()
 
-for key in range(0,4):
+for key in range(4):
 	macropad.pixels[key] = (0, 0, 20+key*2)
 for key in range(4,8):
 	macropad.pixels[key] = (0, 20+key*2, 0)
@@ -29,6 +29,7 @@ for key in range(8,12):
 	macropad.pixels[key] = (20+key*2, 0, 0)
 
 last_position = 0
+print("Ready")
 while True:
 	loop_start_time = time.monotonic()
 	if key_event := macropad.keys.events.get():

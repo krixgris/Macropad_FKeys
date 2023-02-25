@@ -6,12 +6,12 @@
 	"configurations": [
 		{
 			"name": "Copy files to device",
+			"preLaunchTask": "CopyFiles",
 			"type": "python",
 			"request": "launch",
 			"program": "launch.py",
-			"preLaunchTask": "CopyFiles",
-			"console": "integratedTerminal",
-			"justMyCode": true
+			"console": "internalConsole",
+			"internalConsoleOptions": "neverOpen",
 		}
 	]
 }
