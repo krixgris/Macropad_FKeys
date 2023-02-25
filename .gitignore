@@ -1,5 +1,3 @@
-./DEVICE/**/*
-./DEVICE
 DEVICE
-./.vscode/**/*
-./.vscode/settings.json
+.vscode/settings.json
+
