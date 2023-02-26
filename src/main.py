@@ -1,4 +1,5 @@
 from adafruit_macropad import MacroPad
+
 import displayio
 import rainbowio
 import os
@@ -16,7 +17,7 @@ screensaving = False
 screensaver_group = displayio.Group()
 
 loop_start_time = 0
-loop_last_action = 0
+loop_last_action = time.monotonic()
 
 text_lines = macropad.display_text(title="Keypad", title_scale=1, text_scale=2)
 text_lines.show()
@@ -73,7 +74,7 @@ while True:
 		macropad.display.show(screensaver_group)
 
 	elif(screensaving and macropad_sleep_keys and loop_start_time-loop_last_action<MACROPAD_SLEEP_KEYS):
-		screensaving = True
+		screensaving = False
 		macropad.pixels.brightness = MACROPAD_BRIGHTNESS
 		macropad_sleep_keys = False
 		macropad.display.refresh()
